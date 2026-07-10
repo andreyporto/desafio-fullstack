@@ -63,6 +63,6 @@ Você deverá escolher **um** dos dois desafios abaixo para realizar:
 
 ## 📬 Entrega
 
-Ao finalizar, envie o link do repositório para o e-mail ou canal de comunicação indicado pelo recrutador.
+Ao finalizar, envie o link da pull request aberta para o e-mail ou canal de comunicação indicado pelo recrutador.
 
 Boa sorte! 🍀
