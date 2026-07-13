@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0077B6;
+  --color-primary-dark: #005f8f;
+  --color-secondary: #00B4D8;
+  --color-tertiary: #90E0EF;
+  --color-neutral: #F8FAFC;
+
+  --animate-slide-in: slide-in 0.3s ease-out;
+  --animate-dot: dot-bounce 1.2s infinite;
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes dot-bounce {
+    0%, 60%, 100% { opacity: 0.3; }
+    30% { opacity: 1; }
+  }
+}

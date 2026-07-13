@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Room;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -10,16 +11,17 @@ class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $admin = User::factory()->create([
+            "name" => "Admin",
+            "email" => "admin@admin.com",
         ]);
+
+        Room::factory(30)
+            ->create(["created_by" => $admin->id])
+            ->each(function (Room $room) use ($admin) {
+                $room->users()->attach($admin->id, ["joined_at" => now()]);
+            });
     }
 }
