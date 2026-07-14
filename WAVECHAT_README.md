@@ -18,7 +18,7 @@ Sistema de chat em tempo real construído com Laravel 13 e React 19, utilizando 
 ## Setup Backend
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/andreyporto/desafio-fullstack.git
 cd desafio-fullstack/wavechat-api
 composer install
 cp .env.example .env
@@ -67,7 +67,7 @@ A aplicação estará disponível em `http://localhost:5173`.
 ### Obrigatórias
 
 - Autenticação (registro, login, logout) com Laravel Sanctum
-- Salas de chat (criar, listar, entrar, sair)
+- Salas de chat (criar, listar, entrar)
 - Mensagens (enviar, histórico paginado)
 - Broadcast em tempo real via WebSocket com Laravel Reverb
 
@@ -75,6 +75,7 @@ A aplicação estará disponível em `http://localhost:5173`.
 
 - Presence Channels com contagem de usuários online
 - Indicador de "digitando" em tempo real
+- Sair da sala de chat
 - Toast de notificação ao usuário entrar na sala
 - Validação por campo nos formulários
 - Rate limiting no login (5 tentativas por minuto)
